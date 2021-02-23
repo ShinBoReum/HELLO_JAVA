@@ -1,7 +1,5 @@
 package chapter3;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class ImplicitConversion {
     public static void main(String[] args){
         byte bNum= 10;
