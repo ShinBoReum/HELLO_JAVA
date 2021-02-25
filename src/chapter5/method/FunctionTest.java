@@ -13,6 +13,9 @@ package chapter5.method;
 
         -함수를 왜 쓰나?
         코드를 기능별로 효율적으로 구현,관리하기 위해
+
+
+
  */
 public class FunctionTest {
     public static void main(String[] args) {
