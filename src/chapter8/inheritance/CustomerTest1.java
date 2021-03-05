@@ -2,16 +2,14 @@ package chapter8.inheritance;
 
 public class CustomerTest1 {
     public static void main(String[] args) {
-        Customer lee = new Customer();
-        lee.setCustomerID(10001);
-        lee.setCustomerName("lee");
+        Customer lee = new Customer("lee");
+        Customer gee = new Customer("gee");
 
-        VipCustomer vip = new VipCustomer();
-        vip.setCustomerID(10001);
-        vip.setCustomerName("kim");
+        VipCustomer vip = new VipCustomer("kim");
 
         System.out.println(lee.showCustomerInfo());
         System.out.println(vip.showCustomerInfo());
+        System.out.println(gee.showCustomerInfo());
 
 
     }
