@@ -25,17 +25,8 @@ public class Customer {
     }
 
     public int calcPrice(int price){
-        if (customerGrad == "SILVER") {
-            bonusPoint += price * bonusRatio;
-        }
-        else if(customerGrad == "VIP"){
-
-        }
-        else if(customerGrad == "GOLD"){
-
-        }
+        bonusPoint += price * bonusRatio;
         return price;
-
     }
 
     public String showCustomerInfo() {
@@ -48,5 +39,13 @@ public class Customer {
 
     public void setCustomerID(String studentName) {
         this.customerID = customerID;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 }

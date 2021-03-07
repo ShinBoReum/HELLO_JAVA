@@ -17,3 +17,34 @@
  하위 클래스가 상위클래스로 접근할 떄 사용  
  하위에서 super 가 기본 생성자처럼 자동 생성  
  
+ ###메서드 오버라이딩
+ ####상위 클래스 메서드 재정의하기
+ 상위 클래스에 정의한 메서드가 하위 클래스에서 구현할 내용과 맞지 않을 경우 하위 클래스에서 메스드를 재정의.  
+ 반환형, 메서드 이름, 매개 변수 개수, 매개변수 자료형이 반드시 같아야 함.   
+ ex)   
+ * 상위 클래스 Customer  
+  public int calcPrice(int price){
+    bonusPoint += price * bonusRatio;
+    return price;
+  }  
+ * 하위 클래스 VipCustomer  
+  public int calcPrice(int price){
+    bonusPoint += price * bonusRatio;
+    return price - (int)(price * saleRatio);
+  }  
+ 상위 클래스 메서드와 매개변수의 자료형 및 개수가 같고, 반환형도 int 형으로 동일.    
+ 
+ cf) @Override 재정의된 메서드 어노테이션  
+ 
+ #####묵시적 클래스 형 변환과 메서드 재정의
+ Customer kim = new VipCustomer("kim");  
+ System.out.println( kim.getCustomerName() + "님의 요금은 " + kim.calcPrice(10000) +"원 입니다.");  
+ 위 예제 실행시 vip 할인율로 계산.   
+
+ ####가상 메서드
+ 상속에서 상위 클래스와 하위 클래스에 같은 이름의 메서드가 존재할 떄 호출되는 메서드는 인스턴스에 따라 결정.   
+ 선언한 클래스형이 아닌 생성된 인스턴스의 메서드를 호출. => 가상메서드(virtual method) 
+ 프로그램에서 어떤 객체의 변수나 메서드의 참조는 그 타입에 따라 이루어짐.  
+ 가상 메서드의 경우는 타입과 상관없이 실제 생성된 인스턴스의 메서드가 호출 되는 원리.  
+ 재정의 되지않으면 주소가 하나, 재정의 되면 주소가 둘.
+ 
