@@ -10,7 +10,7 @@ class Book{
 
     @Override
     public String toString() {
-        //super에 toString을 재정의
+        //super 에 toString 을 재정의
         return "Book{" +
                 "tilte='" + tilte + '\'' +
                 ", author='" + author + '\'' +
