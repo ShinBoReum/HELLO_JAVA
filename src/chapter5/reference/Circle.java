@@ -1,6 +1,6 @@
 package chapter5.reference;
 
-public class Circle {
+public class Circle  {
 
     Point point;
     int radius;
