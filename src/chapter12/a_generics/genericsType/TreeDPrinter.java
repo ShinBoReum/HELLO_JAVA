@@ -1,0 +1,23 @@
+package chapter12.a_generics.genericsType;
+
+public class TreeDPrinter<T extends Material> {
+    private T material;
+
+    public T getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(T material) {
+        this.material = material;
+    }
+    @Override
+    public String toString() {
+        return "TreeDPrinter{" +
+                "재료=" + material +
+                '}';
+    }
+
+    public void printing() {
+        material.doPrinting();
+    }
+}
